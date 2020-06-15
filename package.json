@@ -1,8 +1,8 @@
 {
-  "name": "movie-project",
+  "name": "action-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ericjames3681.github.io/movie-project/",
+  "homepage": "https://ericjames3681.github.io/action-react/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
