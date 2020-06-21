@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
+import "./App.css";
+import "./module.scss";
 
 export default function SearchMovies() {
   const [query, setQuery] = useState("");
@@ -35,11 +37,14 @@ export default function SearchMovies() {
           Search
         </button>
       </form>
+      <br />
+      <br />
+      <br />
       <Card.Group centered>
         {movies
           .filter((movie) => movie.poster_path)
           .map((movie) => (
-            <Card>
+            <Card className="card">
               <Image
                 src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`}
                 alt={movie.title + " poster"}
@@ -47,13 +52,11 @@ export default function SearchMovies() {
                 ui={false}
               />
               <Card.Content>
+                <Icon name="video cameras" />
                 <Card.Header>{movie.title}</Card.Header>
                 <Card.Meta>RELEASE DATE: {movie.release_date}</Card.Meta>
                 <Card.Meta>RATING: {movie.vote_average}</Card.Meta>
-                <Card.Description>
-                  <Icon name="video cameras" />
-                  {movie.overview}
-                </Card.Description>
+                <Card.Description>{movie.overview}</Card.Description>
               </Card.Content>
             </Card>
           ))}

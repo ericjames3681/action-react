@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Header, Container } from "semantic-ui-react";
 import "./App.css";
+import styles from "./module.scss";
 import SearchMovies from "./SearchMovies.jsx";
 
 class App extends Component {
@@ -11,6 +12,8 @@ class App extends Component {
           A C T I O N !
         </Header>
 
+        <br />
+        <br />
         <br />
         <SearchMovies />
       </Container>
