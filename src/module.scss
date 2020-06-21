@@ -1,5 +1,12 @@
 .card {
-  border-radius: 250px !important;
-  background: #55b9f3 !important;
-  box-shadow: -20px -20px 60px #489dcf, 20px 20px 60px #62d5ff !important;
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  border-radius: 10px !important;
+  padding: 20px !important;
+  width: 240px !important;
+  background: #ebf5fc !important;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc !important;
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
-import "./App.css";
+import "./App.scss";
 import "./module.scss";
 
 export default function SearchMovies() {
@@ -52,7 +52,7 @@ export default function SearchMovies() {
                 ui={false}
               />
               <Card.Content>
-                <Icon name="video cameras" />
+                <Icon name="video camera" />
                 <Card.Header>{movie.title}</Card.Header>
                 <Card.Meta>RELEASE DATE: {movie.release_date}</Card.Meta>
                 <Card.Meta>RATING: {movie.vote_average}</Card.Meta>
