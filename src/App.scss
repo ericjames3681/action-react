@@ -57,8 +57,26 @@ input {
   padding: 40px;
 }
 .title {
-  font-size: 4.4rem;
-  text-align: center;
+  font-size: 4.4rem !important;
+  text-align: center !important;
+  font-family: "Permanent Marker", cursive !important;
+  float: left !important;
+  margin: 0 auto !important;
+}
+.card {
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  border-radius: 10px !important;
+  padding: 20px !important;
+  width: 240px !important;
+  background: #ebf5fc !important;
+  color: #576ec0 !important;
+  font-weight: bold !important;
+  box-shadow: -5px -5px 10px $color-white, 2px 2px 5px $color-shadow !important;
+  transition: all 0.2s ease-in-out !important;
 }
 .form {
   display: grid;
@@ -81,7 +99,7 @@ input {
 .button {
   color: #61677c;
   font-weight: bold;
-  box-shadow: -5px -5px 20px $color-white, 5px 5px 20px $color-shadow;
+  box-shadow: -5px -5px 10px $color-white, 2px 2px 5px $color-shadow;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   font-weight: 600;

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
 import "./App.scss";
-import "./module.scss";
 
 export default function SearchMovies() {
   const [query, setQuery] = useState("");
