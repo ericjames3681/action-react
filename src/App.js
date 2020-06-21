@@ -7,11 +7,10 @@ import SearchMovies from "./SearchMovies.jsx";
 class App extends Component {
   render() {
     return (
-      <Container>
+      <Container className="responsive">
         <Header size="huge" className="title">
           . . . A C T I O N !
         </Header>
-
         <br />
         <br />
         <br />
