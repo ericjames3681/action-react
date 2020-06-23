@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Card, Icon, Image } from "semantic-ui-react";
+import MovieCard from "./MovieCard";
+import { Card, Icon } from "semantic-ui-react";
 import "./App.scss";
 
 export default function SearchMovies() {
@@ -22,7 +23,7 @@ export default function SearchMovies() {
     <>
       <form className="form" onSubmit={searchMovies}>
         <label className="label" htmlFor="query">
-          Movie Name
+          M O V I E &nbsp; N A M E :
         </label>
         <input
           className="input"
@@ -33,7 +34,8 @@ export default function SearchMovies() {
           onChange={(e) => setQuery(e.target.value)}
         />
         <button className="button" type="submit">
-          Search
+          S E A R C H &nbsp; &nbsp;
+          <Icon name="video camera" />
         </button>
       </form>
       <br />
@@ -43,21 +45,7 @@ export default function SearchMovies() {
         {movies
           .filter((movie) => movie.poster_path)
           .map((movie) => (
-            <Card className="card">
-              <Image
-                src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`}
-                alt={movie.title + " poster"}
-                wrapped
-                ui={false}
-              />
-              <Card.Content>
-                <Icon name="video camera" />
-                <Card.Header>{movie.title}</Card.Header>
-                <Card.Meta>RELEASE DATE: {movie.release_date}</Card.Meta>
-                <Card.Meta>RATING: {movie.vote_average}</Card.Meta>
-                <Card.Description>{movie.overview}</Card.Description>
-              </Card.Content>
-            </Card>
+            <MovieCard movie={movie} key={movie.id} />
           ))}
       </Card.Group>
     </>
